@@ -16,3 +16,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # LaTex Installation
 sudo apt install texlive-latex-extra -y
+
+# Node.js Installation
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt-get install gcc g++ make -y 
+sudo apt-get install nodejs -y
+
+# Java Installation
+sudo apt install openjdk-8-jdk -y
