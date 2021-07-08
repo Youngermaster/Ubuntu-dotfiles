@@ -6,7 +6,7 @@ mkdir ~/GitHub/Youngermaster/
 mkdir ~/GitHub/AnotherOnes/
 
 # General packages
-sudo apt-get install vim git cmake g++ build-essential curl net-tools screenfetch htop wget nmap -y
+sudo apt-get install vim git cmake g++ build-essential curl net-tools screenfetch htop wget nmap shotwell linux-headers-generic -y
 
 # Python 3 and pip3
 sudo apt-get install python3 python3-pip -y
@@ -48,4 +48,9 @@ sudo apt-get install gnome-tweaks -y
 # Setup the themes and icons
 mkdir ~/.themes
 mkdir ~/.icons
+
+# Virtualbox
+sudo apt-get install virtualbox Virtualbox-dkms -y
+sudo dpkg-reconfigure virtualbox-dkms
+sudo dpkg-reconfigure virtualbox
 
