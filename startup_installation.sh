@@ -6,7 +6,7 @@ mkdir ~/GitHub/Youngermaster/
 mkdir ~/GitHub/AnotherOnes/
 
 # General packages
-sudo apt-get install vim git cmake g++ build-essential curl net-tools screenfetch htop wget nmap shotwell linux-headers-generic -y
+sudo apt-get install vim git cmake g++ build-essential curl net-tools screenfetch htop wget nmap shotwell linux-headers-generic baobab -y
 
 # Python 3 and pip3
 sudo apt-get install python3 python3-pip -y
