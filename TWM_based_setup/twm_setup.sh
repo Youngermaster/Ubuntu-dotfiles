@@ -49,3 +49,26 @@ sudo ninja -C build install
 
 # Rofi installation
 sudo apt install rofi -y
+
+# We install the background manager
+sudo apt install feh -y
+
+# Polybar config
+cd ~/GitHub/AnotherOnes
+git clone https://github.com/VaughnValle/blue-sky.git
+mkdir ~/.config/polybar
+cd ~/GitHub/AnotherOnes/blue-sky/polybar/
+cp * -r ~/.config/polybar
+echo '~/.config/polybar/./launch.sh' >> ~/.config/bspwm/bspwmrc 
+cd fonts
+sudo cp * /usr/share/fonts/truetype/
+fc-cache -v
+
+# Picom config
+mkdir ~/.config/picom
+cd ~/.config/picom
+cp ~/GitHub/AnotherOnes/blue-sky/picom.conf .
+
+# Border configuration
+echo 'picom --experimental-backends &' >> ~/.config/bspwm/bspwmrc 
+echo 'bspc config border_width 0' >> ~/.config/bspwm/bspwmrc
