@@ -72,3 +72,20 @@ cp ~/GitHub/AnotherOnes/blue-sky/picom.conf .
 # Border configuration
 echo 'picom --experimental-backends &' >> ~/.config/bspwm/bspwmrc 
 echo 'bspc config border_width 0' >> ~/.config/bspwm/bspwmrc
+
+# Rofi theme update
+mkdir -p ~/.config/rofi/themes
+cp ~/GitHub/AnotherOnes/blue-sky/nord.rasi ~/.config/rofi/themes
+
+sudo apt update -y
+sudo apt install slim libpam0g-dev libxrandr-dev libfreetype6-dev libimlib2-dev libxft-dev -y
+
+cd ~/GitHub/AnotherOnes/
+git clone https://github.com/joelburget/slimlock.git
+cd slimlock/
+sudo make
+sudo make install
+cd ~/GitHub/AnotherOnes/blue-sky/slim
+sudo cp slim.conf /etc/
+sudo cp slimlock.conf /etc
+sudo cp -r default /usr/share/slim/themes
