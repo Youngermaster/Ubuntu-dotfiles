@@ -23,8 +23,7 @@ sudo apt-get install piper ratbagd -y
 sudo apt-get install python3 python3-pip -y
 
 # General packages for Python3
-sudo apt-get install python3-pyaudio -y
-pip3 install matplotlib numpy pyaudio jupyterlab
+pip3 install matplotlib numpy matplotlib jupyterlab
 
 # Vim Plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
