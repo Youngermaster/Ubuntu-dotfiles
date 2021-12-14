@@ -6,7 +6,18 @@ mkdir ~/GitHub/Youngermaster/
 mkdir ~/GitHub/AnotherOnes/
 
 # General packages
-sudo apt-get install vim git cmake g++ build-essential curl net-tools screenfetch htop wget nmap shotwell linux-headers-generic baobab libuv1-dev flameshot mupdf -y
+sudo apt-get install vim git cmake g++ build-essential curl net-tools screenfetch htop wget nmap shotwell linux-headers-generic baobab libuv1-dev flameshot mupdf ranger -y
+
+# Mouse Drivers
+sudo apt-get install piper ratbagd -y
+## On the file "/usr/share/libratbag/logitech-g102-g203.device" 
+## I should add this:
+## # G102 and G203 (USB)
+## [Device]
+## Name=Logitech Gaming Mouse G102/G103
+## DeviceMatch=usb:046d:c084;usb:046d:c092
+## Driver=hidpp20
+## LedTypes=logo;side;
 
 # Python 3 and pip3
 sudo apt-get install python3 python3-pip -y
