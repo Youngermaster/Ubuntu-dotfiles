@@ -89,3 +89,9 @@ cd ~/GitHub/AnotherOnes/blue-sky/slim
 sudo cp slim.conf /etc/
 sudo cp slimlock.conf /etc
 sudo cp -r default /usr/share/slim/themes
+
+
+
+# To avoid errors gray screens with IDEA IDEs or Android Studio
+sudo apt-get install wmname -y
+wmname LG3D
