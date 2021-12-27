@@ -25,9 +25,10 @@ sudo apt-get install python3 python3-pip -y
 # General packages for Python3
 pip3 install matplotlib numpy matplotlib jupyterlab
 
-# Vim Plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# NVim
+sudo apt-get install nvim exuberant-ctags -y
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # LaTex Installation
 sudo apt install texlive-latex-extra -y
