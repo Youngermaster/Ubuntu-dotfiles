@@ -20,7 +20,7 @@ sudo apt-get install piper ratbagd -y
 ## LedTypes=logo;side;
 
 # Python 3 and pip3
-sudo apt-get install python3 python3-pip -y
+sudo apt-get install python3 python3-venv python3-pip -y
 
 # General packages for Python3
 pip3 install matplotlib numpy matplotlib jupyterlab
