@@ -70,6 +70,7 @@ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update -y && sudo apt-get install spotify-client -y
 
+# ############## SWAP ##############
 # Resize Swap to 16GB
 # Turn swap off
 # This moves stuff in swap to the main memory and might take several minutes
@@ -84,3 +85,7 @@ sudo chmod 0600 /swapfile
 
 sudo mkswap /swapfile  # Set up a Linux swap area
 sudo swapon /swapfile  # Turn the swap on
+
+# To make the change permanent open the /etc/fstab file and append the following line:
+# /swapfile swap swap defaults 0 0
+# ############## SWAP ##############
