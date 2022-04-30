@@ -90,7 +90,10 @@ sudo cp slim.conf /etc/
 sudo cp slimlock.conf /etc
 sudo cp -r default /usr/share/slim/themes
 
+echo "xsetroot -cursor_name left_ptr &" >> ~/.config/bspwm/bspwmrc
 
+usermod --shell /usr/bin/zsh $USER
+usermod --shell /usr/bin/zsh root
 
 # To avoid errors gray screens with IDEA IDEs or Android Studio
 sudo apt-get install wmname -y
