@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # program launcher
 super + d
@@ -141,7 +141,11 @@ super + shift + F1
 super + shift + s
         flameshot gui
 
-# TODO Brightness
+# Brightness Up
 super + shift + F8
-        light -A 90       
+        light -A 10       
+
+# Brightness Down
+super + shift + F7
+        light -U 10       
 
