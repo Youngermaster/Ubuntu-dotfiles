@@ -19,6 +19,9 @@ sudo apt-get install piper ratbagd -y
 ## Driver=hidpp20
 ## LedTypes=logo;side;
 
+# Fonts
+sudo apt-get install fonts-noto fonts-noto-cjk fonts-noto-color-emoji -y
+
 # Python 3 and pip3
 sudo apt-get install python3 python3-venv python3-pip -y
 
