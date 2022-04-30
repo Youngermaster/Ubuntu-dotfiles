@@ -98,3 +98,6 @@ usermod --shell /usr/bin/zsh root
 # To avoid errors gray screens with IDEA IDEs or Android Studio
 sudo apt-get install wmname -y
 wmname LG3D
+
+# Avoid problems with light permissions
+sudo chmod +s /usr/bin/light
