@@ -34,7 +34,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # LaTex Installation
-sudo apt install texlive-latex-extra -y
+sudo apt install texlive-latex-extra texlive-full -y
 
 # Node.js Installation
 curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
