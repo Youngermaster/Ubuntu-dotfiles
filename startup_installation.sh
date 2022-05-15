@@ -82,7 +82,7 @@ sudo swapoff -a
 # Create an empty swapfile
 # Note that "1G" is basically just the unit and count is an integer.
 # Together, they define the size. In this case 16GB.
-sudo dd if=/dev/zero of=/swapfile bs=1G count=16
+sudo dd if=/dev/zero of=/swapfile bs=1G count=8
 # Set the correct permissions
 sudo chmod 0600 /swapfile
 
