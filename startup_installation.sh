@@ -37,13 +37,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 sudo apt install texlive-latex-extra texlive-full -y
 
 # Node.js Installation
-curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt-get install gcc g++ make -y 
 sudo apt-get install nodejs -y
 
 # Java Installation
-sudo apt install openjdk-8-jdk -y
+sudo apt install openjdk-11-jdk -y
 
 # OBS Studio for virtual camera
 sudo apt install ffmpeg -y
