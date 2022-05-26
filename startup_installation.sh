@@ -22,6 +22,9 @@ sudo apt-get install piper ratbagd -y
 # Fonts
 sudo apt-get install fonts-noto fonts-noto-cjk fonts-noto-color-emoji -y
 
+# ZSH
+sudo apt-get install zsh zsh-syntax-highlighting zsh-autosuggestions -y
+
 # Python 3 and pip3
 sudo apt-get install python3 python3-venv python3-pip -y
 
