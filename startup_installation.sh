@@ -1,12 +1,16 @@
 sudo apt-get update -y
 
 # Creates the folders to work on
-mkdir ~/GitHub/
-mkdir ~/GitHub/Youngermaster/
+mkdir -p ~/GitHub/Youngermaster/
 mkdir ~/GitHub/AnotherOnes/
+mkdir -p ~/GitLab/Youngermaster/
+mkdir ~/GitLab/AnotherOnes/
 
 # General packages
-sudo apt-get install vim git cmake g++ build-essential curl net-tools screenfetch htop wget nmap shotwell linux-headers-generic baobab libuv1-dev flameshot mupdf ranger -y
+sudo apt-get install vim git cmake g++ build-essential curl net-tools neofetch htop wget nmap ranger -y
+
+# Graphical stuff
+sudo apt-get install linux-headers-generic baobab libuv1-dev flameshot shotwell mupdf -y
 
 # Mouse Drivers
 sudo apt-get install piper ratbagd -y
@@ -95,3 +99,6 @@ sudo swapon /swapfile  # Turn the swap on
 # To make the change permanent open the /etc/fstab file and append the following line:
 # /swapfile swap swap defaults 0 0
 # ############## SWAP ##############
+sudo echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
+
+sudo apt-get upgrade -y
