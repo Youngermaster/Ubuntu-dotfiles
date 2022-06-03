@@ -28,6 +28,9 @@ sudo apt-get install fonts-noto fonts-noto-cjk fonts-noto-color-emoji -y
 
 # ZSH
 sudo apt-get install zsh zsh-syntax-highlighting zsh-autosuggestions -y
+sudo usermod --shell /usr/bin/zsh $USER
+sudo usermod --shell /usr/bin/zsh root
+# Then go to powerlevel10k and follow the instructions
 
 # Python 3 and pip3
 sudo apt-get install python3 python3-venv python3-pip -y
