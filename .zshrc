@@ -300,12 +300,14 @@ setopt appendhistory
 
 # Development paths
 export PATH=$PATH:$HOME/.cargo/env
-#export PATH="$HOME/.local/bin:$PATH"
-export DOTNET_ROOT="/usr/share/dotnet"
-export PATH="$PATH:/usr/share/dotnet"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:/home/youngermaster/Flutter/flutter/bin"
 export PATH="$PATH:/home/youngermaster/AndroidStudio/android-studio/bin"
-export PATH="$PATH:/home/youngermaster/JetBrains/Rider/bin/"
+# Optional Development paths
+#export PATH="$PATH:/home/youngermaster/JetBrains/Rider/bin/"
+#export DOTNET_ROOT="/usr/share/dotnet"
+#export PATH="$PATH:/usr/share/dotnet"
 #export PATH="$PATH:/home/youngermaster/AppImages"
 
 # Android SDK Tools
