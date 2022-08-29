@@ -12,6 +12,9 @@ sudo apt-get install vim git cmake g++ build-essential curl net-tools neofetch h
 # Graphical stuff
 sudo apt-get install linux-headers-generic baobab libuv1-dev flameshot shotwell mupdf -y
 
+# Common apps dependencies
+sudo apt install libgconf-2-4 libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian libgdk-pixbuf2.0-0 -y
+
 # Mouse Drivers
 sudo apt-get install piper ratbagd -y
 ## On the file "/usr/share/libratbag/logitech-g102-g203.device" 
