@@ -14,6 +14,7 @@ sudo apt-get install linux-headers-generic baobab libuv1-dev flameshot shotwell 
 
 # Common apps dependencies
 sudo apt install libgconf-2-4 libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian libgdk-pixbuf2.0-0 -y
+sudo apt install clang ninja-build libgtk-3-dev -y
 
 # Mouse Drivers
 sudo apt-get install piper ratbagd -y
@@ -25,9 +26,6 @@ sudo apt-get install piper ratbagd -y
 ## DeviceMatch=usb:046d:c084;usb:046d:c092
 ## Driver=hidpp20
 ## LedTypes=logo;side;
-
-# Fonts
-sudo apt-get install fonts-noto fonts-noto-cjk fonts-noto-color-emoji -y
 
 # ZSH
 sudo apt-get install zsh zsh-syntax-highlighting zsh-autosuggestions -y
@@ -47,7 +45,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # LaTex Installation
-sudo apt install texlive-latex-extra texlive-full -y
+sudo apt install texlive-latex-extra texlive-full pandoc -y
 
 # Node.js Installation
 curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
@@ -75,16 +73,6 @@ sudo apt-get install gnome-tweaks -y
 # Setup the themes and icons
 mkdir ~/.themes
 mkdir ~/.icons
-
-# Virtualbox
-sudo apt-get install virtualbox virtualbox-dkms -y
-sudo dpkg-reconfigure virtualbox-dkms
-sudo dpkg-reconfigure virtualbox
-
-# Spotify
-curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update -y && sudo apt-get install spotify-client -y
 
 # ############## SWAP ##############
 # Resize Swap to 16GB
