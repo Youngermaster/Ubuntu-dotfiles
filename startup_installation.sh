@@ -5,6 +5,10 @@ mkdir -p ~/GitHub/Youngermaster/
 mkdir ~/GitHub/AnotherOnes/
 mkdir -p ~/GitLab/Youngermaster/
 mkdir ~/GitLab/AnotherOnes/
+mkdir ~/Obsidian
+mkdir ~/Flutter
+mkdir ~/AndroidStudio
+mkdir ~/ISOs
 
 # General packages
 sudo apt-get install vim git cmake g++ build-essential curl net-tools neofetch htop wget nmap ranger -y
