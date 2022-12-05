@@ -19,6 +19,24 @@ sudo apt-get install linux-headers-generic baobab libuv1-dev flameshot shotwell 
 # Common apps dependencies
 sudo apt install libgconf-2-4 libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian libgdk-pixbuf2.0-0 -y
 sudo apt install clang ninja-build libgtk-3-dev -y
+sudo apt install libqt5help5 libqt5xml5 libc++1 -y
+
+# Flathub based installations
+flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
+flatpak install flathub org.telegram.desktop -y
+flatpak install flathub com.spotify.Client -y
+flatpak install flathub md.obsidian.Obsidian -y
+mkdir ~/Obsidian/
+
+# Fonts installation
+mkdir -p ~/.fonts/
+mkdir -p ~/.local/share/fonts/
+cp -r fonts/* ~/.fonts/
+cp -r fonts/* ~/.local/share/fonts/
+fc-cache -fv
+
+# Some configs added
+cp -r .config/* ~/.config
 
 # Mouse Drivers
 sudo apt-get install piper ratbagd -y
@@ -35,18 +53,14 @@ sudo apt-get install piper ratbagd -y
 sudo apt-get install zsh zsh-syntax-highlighting zsh-autosuggestions -y
 sudo usermod --shell /usr/bin/zsh $USER
 sudo usermod --shell /usr/bin/zsh root
-# Then go to powerlevel10k and follow the instructions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # Python 3 and pip3
 sudo apt-get install python3 python3-venv python3-pip -y
 
 # General packages for Python3
-pip3 install matplotlib numpy matplotlib jupyterlab
-
-# NVim
-sudo apt-get install nvim exuberant-ctags -y
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+pip3 install matplotlib numpy jupyterlab
 
 # LaTex Installation
 sudo apt install texlive-latex-extra texlive-full pandoc -y
