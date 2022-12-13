@@ -195,8 +195,8 @@ fi
 compinit -u -d "$compfile"
 
 # zsh auto suggestions and syntax highlighting and auto completion
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Custom Highlight syntax
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4C566A,underline"
@@ -324,11 +324,13 @@ export PATH="$PATH:/usr/share/pomodoro_cli/"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519_youngermaster_github
 ssh-add ~/.ssh/id_ed25519_youngermaster_gitlab
+ssh-add ~/.ssh/id_rsa_bitbucket
 ssh-add ~/.ssh/id_rsa_jmyoung_getaclub
 clear
 
 # To avoid errors gray screens with IDEA IDEs or Android Studio
-wmname LG3D
+#wmname LG3D
 
 # Set keymaps to LATAM
-setxkbmap -layout latam,es
+#setxkbmap -layout latam,es
+
