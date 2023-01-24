@@ -21,6 +21,7 @@ sudo apt install libgconf-2-4 libqt5opengl5 libqt5printsupport5 libqt5x11extras5
 sudo apt install clang ninja-build libgtk-3-dev -y
 sudo apt install libqt5help5 libqt5xml5 libc++1 -y
 ## Flutter new Linux dependency
+sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
 sudo apt install -y lib32stdc++-12-dev
 
 # Flathub based installations
