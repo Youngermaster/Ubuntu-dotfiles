@@ -15,6 +15,7 @@ sudo apt-get install vim git cmake g++ build-essential curl net-tools neofetch h
 
 # Graphical stuff
 sudo apt-get install linux-headers-generic baobab libuv1-dev flameshot shotwell mupdf -y
+sudo apt install -y wmname bspwm sxhkd python3-pastel thunar rofi polybar dunst mpd mpc maim xclip viewnior feh xsettingsd light xcolors xfce4-power-manager
 
 # Common apps dependencies
 sudo apt install libgconf-2-4 libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian libgdk-pixbuf2.0-0 -y
@@ -83,6 +84,14 @@ sudo apt install v4l2loopback-dkms -y
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update -y
 sudo apt install obs-studio -y
+
+# Virtualization
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
+sudo usermod -aG libvirt $USER
+sudo usermod -aG kvm $USER
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+sudo apt install virt-manager -y
 
 # Installing Complete Multimedia Support
 sudo apt install ubuntu-restricted-extras -y
