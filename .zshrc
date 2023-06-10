@@ -1,31 +1,13 @@
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#! /bin/zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-#--------------------------------------------------------------------------------
-#	▒███████▒  ██████  ██░ ██     ▄████▄   ▒█████   ███▄    █   █████▒██▓  ▄████
-#	▒ ▒ ▒ ▄▀░▒██    ▒ ▓██░ ██▒   ▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██▒ ▀█▒
-#	░ ▒ ▄▀▒░ ░ ▓██▄   ▒██▀▀██░   ▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒████ ░▒██▒▒██░▄▄▄░
-#	  ▄▀▒   ░  ▒   ██▒░▓█ ░██    ▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░▓█▒  ░░██░░▓█  ██▓
-#	▒███████▒▒██████▒▒░▓█▒░██▓   ▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░▒█░   ░██░░▒▓███▀▒
-#	░▒▒ ▓░▒░▒▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒   ░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒  ▒ ░   ░▓   ░▒   ▒
-#	░░▒ ▒ ░ ▒░ ░▒  ░ ░ ▒ ░▒░ ░     ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ░      ▒ ░  ░   ░
-#	░ ░ ░ ░ ░░  ░  ░   ░  ░░ ░   ░        ░ ░ ░ ▒     ░   ░ ░  ░ ░    ▒ ░░ ░   ░
-#	  ░ ░          ░   ░  ░  ░   ░ ░          ░ ░           ░         ░        ░
-#	░                            ░
-#--------------------------------By: @rxyhn--------------------------------------
-
-
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -58,11 +40,6 @@ toppy() {
 
 file_amount() {
     ls -l | wc -l
-}
-
-# ls with preferred arguments
-ls() {
-	command ls --group-directories-first --color=auto -F1 "$@"
 }
 
 # cd and ls after
@@ -204,9 +181,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4C566A,underline"
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="false"
 
-# fzf source
-source /usr/share/fzf/key-bindings.zsh
-
 ###############################
 # ****** ALIAS SECTION ****** #
 ###############################
@@ -263,20 +237,11 @@ notify-send "cool1" "yeah it is working"
 notify-send "cool2" "yeah it is working"'
 
 # ---------------P R O M P T------------------
-# Init Starship
-eval "$(starship init zsh)"
-# Setup Starship custom prompt
-export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Custom Aliases
 alias nv='nvim'
@@ -302,13 +267,20 @@ setopt appendhistory
 export PATH=$PATH:$HOME/.cargo/env
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.nimble/bin
+export DOTNET_ROOT="/usr/share/dotnet"
+export PATH="$PATH:/usr/share/dotnet"
 export PATH="$PATH:/home/youngermaster/Flutter/flutter/bin"
 export PATH="$PATH:/home/youngermaster/AndroidStudio/android-studio/bin"
-# Optional Development paths
-#export PATH="$PATH:/home/youngermaster/JetBrains/Rider/bin/"
-#export DOTNET_ROOT="/usr/share/dotnet"
-#export PATH="$PATH:/usr/share/dotnet"
-#export PATH="$PATH:/home/youngermaster/AppImages"
+export PATH="$PATH:/home/youngermaster/JetBrains/Rider/bin/"
+export PATH="$PATH:/home/youngermaster/AppImages"
+## Flutter
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+## Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Android SDK Tools
 export PATH="$PATH:/home/youngermaster/Android/Sdk/build-tools/32.0.0/"
@@ -322,15 +294,9 @@ export PATH="$PATH:/usr/share/pomodoro_cli/"
 
 # Git config
 eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/aur
+ssh-add ~/.ssh/id_ed25519_young_bitbucket
 ssh-add ~/.ssh/id_ed25519_youngermaster_github
 ssh-add ~/.ssh/id_ed25519_youngermaster_gitlab
-ssh-add ~/.ssh/id_rsa_bitbucket
 ssh-add ~/.ssh/id_rsa_jmyoung_getaclub
 clear
-
-# To avoid errors gray screens with IDEA IDEs or Android Studio
-#wmname LG3D
-
-# Set keymaps to LATAM
-#setxkbmap -layout latam,es
-
