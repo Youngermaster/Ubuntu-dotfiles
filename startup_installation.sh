@@ -16,6 +16,7 @@ sudo apt-get install vim git cmake g++ build-essential curl net-tools neofetch h
 # Graphical stuff
 sudo apt-get install linux-headers-generic baobab libuv1-dev flameshot shotwell mupdf -y
 sudo apt install -y wmname bspwm sxhkd python3-pastel thunar rofi polybar dunst mpd mpc maim xclip viewnior feh xsettingsd light xcolors xfce4-power-manager
+sudo apt install -y libapr1 libaprutil1 libxcb-damage0
 
 # Common apps dependencies
 sudo apt install libgconf-2-4 libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian libgdk-pixbuf2.0-0 -y
@@ -70,9 +71,14 @@ pip3 install matplotlib numpy jupyterlab
 sudo apt install texlive-latex-extra texlive-full pandoc -y
 
 # Node.js Installation
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install gcc g++ make -y 
-sudo apt-get install nodejs -y
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
+## To install the Yarn package manager, run:
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update -y && sudo apt-get install yarn -y
 
 # Docker
 sudo apt-get update -y
