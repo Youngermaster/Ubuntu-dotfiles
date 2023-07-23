@@ -150,3 +150,6 @@ sudo swapon /swapfile  # Turn the swap on
 sudo echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
 
 sudo apt-get upgrade -y
+
+# Add Android Studio launcher
+# cp android-studio.desktop ~/.local/share/applications/
