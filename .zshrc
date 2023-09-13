@@ -287,6 +287,8 @@ export PATH="$PATH:/home/youngermaster/Android/Sdk/build-tools/32.0.0/"
 export PATH="$PATH:/home/youngermaster/Android/Sdk/cmdline-tools/latest/bin/"
 export ANDROID_SDK_ROOT=/home/youngermaster/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Pomodoro Program PATH
