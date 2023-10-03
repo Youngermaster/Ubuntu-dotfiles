@@ -290,6 +290,8 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+# Android Emulator pipewire audio crackling synchronization
+export PULSE_LATENCY_MSEC=60
 
 # Pomodoro Program PATH
 export PATH="$PATH:/usr/share/pomodoro_cli/"

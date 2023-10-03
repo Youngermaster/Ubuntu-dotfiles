@@ -153,3 +153,4 @@ sudo apt-get upgrade -y
 
 # Add Android Studio launcher
 # cp android-studio.desktop ~/.local/share/applications/
+sudo ln -s /home/youngermaster/AndroidStudio/android-studio/bin/studio.sh /usr/bin/android-studio
