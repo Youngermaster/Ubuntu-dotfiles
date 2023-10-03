@@ -5,5 +5,5 @@ Version=1.0
 Type=Application
 Terminal=false
 Icon=/home/youngermaster/AndroidStudio/android-studio/bin/studio.png
-Exec=bash /home/youngermaster/AndroidStudio/android-studio/bin/studio.sh
+Exec=bash -c 'PULSE_LATENCY_MSEC=60 /home/youngermaster/AndroidStudio/android-studio/bin/studio.sh'
 Name=Android Studio
